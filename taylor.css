@@ -1,0 +1,152 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2b2b2b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.spotify-player {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 15px;
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    height: 120px;
+}
+
+.player-left, .player-center, .player-right {
+    display: flex;
+    align-items: center;
+}
+
+.player-left {
+    flex: 1;
+}
+
+.cover-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.artist-name {
+    margin: 0;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.player-center {
+    flex: 2;
+    flex-direction: column;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #1DB954; /* Spotify Green */
+    font-size: 22px;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#progressBar {
+    background-color: #ccc;
+    border-radius: 5px;
+    height: 6px;
+    flex-grow: 1;
+    margin: 0 10px;
+    position: relative;
+}
+
+#currentProgress {
+    background-color: #1db954;
+    height: 100%;
+    width: 0; /* Start at 0, dynamically updated */
+    border-radius: 5px;
+}
+
+.current-time, .total-time {
+    font-size: 12px;
+}
+
+.player-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+#volume-slider {
+    margin-left: 10px;
+    width: 80px; /* Smaller width for mobile */
+}
+
+/* Media Query for Mobile Devices (Redmi Note 13) */
+@media (max-width: 480px) {
+    .spotify-player {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .player-left, .player-center, .player-right {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cover-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .controls button {
+        font-size: 20px;
+        padding: 5px 8px;
+    }
+
+    .progress-container {
+        margin: 5px 0;
+    }
+
+    #volume-slider {
+        width: 60px;
+    }
+}
